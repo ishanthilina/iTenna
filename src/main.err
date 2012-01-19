@@ -1,0 +1,11 @@
+>>> Warning 203 "main.c" Line 207(1,1): Condition always TRUE
+>>> Warning 203 "main.c" Line 217(1,1): Condition always TRUE
+>>> Warning 208 "main.c" Line 278(5,11): Function not void and does not return a value  decode
+>>> Warning 203 "main.c" Line 427(1,1): Condition always TRUE
+>>> Warning 216 "main.c" Line 453(0,1): Interrupts disabled during call to prevent re-entrancy:  (@DIV88)
+>>> Warning 216 "main.c" Line 453(0,1): Interrupts disabled during call to prevent re-entrancy:  (@READBITA)
+>>> Warning 202 "main.c" Line 27(11,16): Variable never used:   state
+>>> Warning 202 "main.c" Line 48(6,20): Variable never used:   ch_select_mode
+>>> Warning 202 "main.c" Line 168(17,22): Variable never used:   count
+      Memory usage:   ROM=26%      RAM=9% - 14%
+      0 Errors,  9 Warnings.

@@ -1,0 +1,7 @@
+iTenna is an intelligent antenna rotation system that has the capability to store the directions of the broadcasting stations and rotate the antenna according to the TV channel that has been selected. 
+
+The source code in the src folder is a PIC C prpject file. The actual source code is located in the main.c file.
+
+The Documentation folder contains the documentation generated while progreesing in the project.
+
+http://www.ishans.info/index.php?option=com_content&view=article&id=66:itenna-an-intelligent-tv-antenna-controller&catid=39:common&Itemid=76

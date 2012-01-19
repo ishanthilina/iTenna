@@ -1,0 +1,89 @@
+
+ROM used: 8386 (26%)
+          8386 (26%) including unused fragments
+
+          3 Average locations per line
+          18 Average locations per statement
+
+RAM used: 131 (9%) at main() level
+          219 (14%) worst case
+
+Stack used: 8 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  452   201  44  main.c
+   27     0   0  main.h
+  358     0   0  ..\..\..\..\Program Files\PICC\devices\18F452.h
+ 2182   260  56  ..\..\..\..\Program Files\PICC\drivers\math.h
+----- -----
+ 3019   461 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   0   1             @delay_ms1
+0    792   5  20  1121 10.1  CEIL_FLOOR
+0    118   1  10             @FLT
+0     56   0   4             @SFTOI
+0     54   0   2             @ITOF
+0    242   1  11             @MULFF
+0    618   4  16             @ADDFF
+0     24   0   4    43  2.1  floor
+0     26   0   4    44  1.9  ceil
+0    348   2  16   259  6.9  fmod
+0    346   2  14             @DIVFF
+0    978   6  22  1071  8.0  exp
+0     72   0   2             @SITOF
+0   1180   7  25  1230  9.8  log
+0    734   4  12   556  7.5  pow
+0    100   1   2   309  5.6  ccp1_isr
+0    248   1   4   546  5.3  TIMER0_isr
+0     40   0   3             @DIV88
+0     46   0   5             @READBITA
+0     68   0   5             @DIV1616
+0     14   0   0    56  1.6  EXT_isr
+0     28   0   0   106  1.3  initialize_motor
+0     94   1   2   600  6.0  give_pulse
+0     68   0   2   369  4.2  give_pulse_manual
+0     72   0   5   497  8.2  rotate
+0     48   0   2    50  2.0  save_channel
+0     28   0   2    29  1.6  read_channel_position
+0    106   1   1   192  2.3  select_channel
+0    132   1   2             @PRINTF_U_9600_31766_31767
+0    676   4  11  1750 10.2  decode
+0     62   0   6             @WRITEBITA
+0     32   0   5             @MUL1616
+0    166   1   9             @PRINTF_LU_9600_31766_31767
+0      8   0   0             @const282
+0     34   0   2             @PSTRINGC_9600_31766_31767
+0     52   0   0   179  2.9  menuPressed
+0     22   0   0             @const285
+0     14   0   0             @const286
+0     24   0   1    43  1.3  upPressed
+0     12   0   0             @const288
+0     24   0   1    43  1.3  downPressed
+0     14   0   0             @const290
+0    100   1   1   453  4.0  check_buttons
+0    232   1   2   652  6.2  MAIN
+
+Program metrics:
+    Functions               23
+    Statements              461
+    Comments                379
+    Volume (V)              17156
+    Difficilty (D)          109.6
+    Effort to implement (E) 1880088
+    Time to implement (T)   29 hours, 1 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   53
+    Maintainability (MI)    88
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000C4   190  0  
+000C6-07FFE  8192  24378  
+
+
+

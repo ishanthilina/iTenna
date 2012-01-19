@@ -1,0 +1,293 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A-023 mask_A
+024-025 mask_E
+026-027 timer_counter
+028     state
+029     speed
+02A     i
+02B.0   newpulse
+02B.1   ch_select_mode
+02B.2   up_button_pressed
+02B.3   down_button_pressed
+02B.4   timeout
+02B.5   ch_select_mode_prestate
+02B.6   up_button_pressed_prestate
+02B.7   down_button_pressed_prestate
+02C-07B array
+07C-07D old_ccp
+07E     current_step
+07F     current_ch
+080.0   tuning_state
+081     MAIN.j
+081-084 atan2.y
+082.0   check_buttons.ch_select_mode_curstate
+082-083 decode.code
+082     give_pulse_manual.clk_wise
+082.1   up_button_pressed_curstate
+082.2   down_button_pressed_curstate
+082     MAIN.@SCRATCH1
+083     save_channel.ch_number
+083     give_pulse_manual.count
+083     upPressed.@SCRATCH1
+083     downPressed.@SCRATCH1
+083     MAIN.@SCRATCH2
+084     save_channel.steps
+084-085 decode.decoded_code
+085-088 atan2.x
+086     decode.index
+087     decode.y
+088     decode.x
+089     y
+089-08C atan2.z
+08A-08B tmp
+08C-08D tmp2
+08D.0   atan2.sign
+08E     @WRITEBITA.P1
+08E-08F @PRINTF_LU_9600_31766_31767.P2
+08E     select_channel.ch_number
+08E-08F @MUL1616.P1
+08E     atan2.quad
+08E     decode.@SCRATCH1
+08E     @PSTRINGC_9600_31766_31767.@SCRATCH1
+08F     select_channel.desired_loc
+08F     @WRITEBITA.P1
+08F     decode.@SCRATCH2
+08F     @PSTRINGC_9600_31766_31767.@SCRATCH2
+090     read_channel_position.ch_number
+090-091 @MUL1616.P1
+090     rotate.old_pos
+090-091 @WRITEBITA.P1
+090     @PRINTF_U_9600_31766_31767.P2
+090     decode.@SCRATCH3
+090     @PRINTF_LU_9600_31766_31767.@SCRATCH1
+091     rotate.new_pos
+091     @PRINTF_U_9600_31766_31767.P1
+091     read_channel_position.@SCRATCH1
+091     decode.@SCRATCH4
+091     @PRINTF_LU_9600_31766_31767.@SCRATCH2
+092-095 pow.x
+092     rotate.clkwise_count
+092     @MUL1616.@SCRATCH1
+092     @PRINTF_LU_9600_31766_31767.@SCRATCH3
+093     rotate.anticlk_count
+093     @PRINTF_LU_9600_31766_31767.@SCRATCH4
+094     rotate.count
+094     @PRINTF_LU_9600_31766_31767.@SCRATCH5
+095     give_pulse.x
+095     @PRINTF_LU_9600_31766_31767.@SCRATCH6
+096     give_pulse.clk_wise
+096-099 pow.y
+096     @PRINTF_LU_9600_31766_31767.@SCRATCH7
+097     give_pulse.count
+098     @delay_ms1.P1
+09A-09D fmod.x
+09A     pow.@SCRATCH1
+09B     pow.@SCRATCH2
+09C     pow.@SCRATCH3
+09D     pow.@SCRATCH4
+09E-0A1 fmod.y
+09E-0A1 exp.x
+09E-0A1 log.x
+0A2-0A5 exp.y
+0A2-0A5 fmod.i
+0A2-0A5 log.y
+0A6-0A9 log.res
+0A6-0A9 exp.res
+0A6     fmod.@SCRATCH1
+0A7     fmod.@SCRATCH2
+0A8     fmod.@SCRATCH3
+0A9     fmod.@SCRATCH4
+0AA-0AD floor.x
+0AA-0AD ceil.x
+0AA-0AD log.r
+0AA-0AD exp.r
+0AE-0B1 CEIL_FLOOR.x
+0AE     exp.n
+0AE-0B1 log.y2
+0AF.0   exp.s
+0B0     exp.@SCRATCH1
+0B1     exp.@SCRATCH2
+0B2     CEIL_FLOOR.n
+0B2     log.n
+0B2     exp.@SCRATCH3
+0B3-0B6 CEIL_FLOOR.y
+0B3     exp.@SCRATCH4
+0B3     log.@SCRATCH1
+0B4-0B5 @SITOF.P1
+0B4     log.@SCRATCH2
+0B5     log.@SCRATCH3
+0B6     log.@SCRATCH4
+0B7-0BA CEIL_FLOOR.res
+0B7-0BA @DIVFF.P1
+0BB-0BC CEIL_FLOOR.l
+0BB-0BE @DIVFF.P1
+0BD.0   CEIL_FLOOR.s
+0BE-0C1 @MULFF.P1
+0BE-0C1 @SFTOI.P2
+0BE-0C1 @FLT.P3
+0BE     CEIL_FLOOR.@SCRATCH1
+0BF     CEIL_FLOOR.@SCRATCH2
+0BF     @DIVFF.@SCRATCH1
+0C0     CEIL_FLOOR.@SCRATCH3
+0C0     @DIVFF.@SCRATCH2
+0C1     CEIL_FLOOR.@SCRATCH4
+0C1     @DIVFF.@SCRATCH3
+0C2-0C5 @ADDFF.P1
+0C2-0C3 @ITOF.P2
+0C2-0C5 @FLT.P3
+0C2-0C5 @MULFF.P4
+0C2     @DIVFF.@SCRATCH4
+0C3     @DIVFF.@SCRATCH5
+0C4     @DIVFF.@SCRATCH6
+0C6-0C9 @ADDFF.P1
+0C6     @FLT.@SCRATCH1
+0C6     @MULFF.@SCRATCH1
+0C7     @FLT.@SCRATCH2
+0C7     @MULFF.@SCRATCH2
+0C8     @MULFF.@SCRATCH3
+0CA     @ADDFF.@SCRATCH1
+0CB     @ADDFF.@SCRATCH2
+0CC     @ADDFF.@SCRATCH3
+0CD     @ADDFF.@SCRATCH4
+0CE     @ADDFF.@SCRATCH5
+0CF     @ADDFF.@SCRATCH6
+0D0     @ADDFF.@SCRATCH7
+0D1     @ADDFF.@SCRATCH8
+0D2-0D3 ccp1_isr.ccp_delta
+0D2-0D3 TIMER0_isr.x
+0D4     @READBITA.P1
+0D4     @DIV88.P2
+0D4     ccp1_isr.@SCRATCH1
+0D4     TIMER0_isr.@SCRATCH1
+0D5-0D6 @READBITA.P1
+0D5     @DIV88.P2
+0D5     ccp1_isr.@SCRATCH2
+0D5     TIMER0_isr.@SCRATCH2
+0D6-0D7 @DIV1616.P1
+0D6     @DIV88.@SCRATCH1
+0D8-0D9 @DIV1616.P1
+0DA     @DIV1616.@SCRATCH1
+F83     PSP_DATA
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+032C  @delay_ms1
+0C3A  CEIL_FLOOR
+06D6  @FLT
+08A6  @SFTOI
+06A0  @ITOF
+08DE  @MULFF
+09D0  @ADDFF
+0F6C  floor
+0F52  ceil
+0F84  fmod
+074C  @DIVFF
+15C4  exp
+10E0  @SITOF
+1128  log
+1996  pow
+00C6  ccp1_isr
+01C4  TIMER0_isr
+012A  @DIV88
+0152  @READBITA
+0180  @DIV1616
+02BC  EXT_isr
+0310  initialize_motor
+0354  give_pulse
+061E  give_pulse_manual
+04D8  rotate
+03D4  save_channel
+0438  read_channel_position
+0520  select_channel
+0454  @PRINTF_U_9600_31766_31767
+1D3A  decode
+0662  @WRITEBITA
+1C74  @MUL1616
+1C94  @PRINTF_LU_9600_31766_31767
+02CA  @const282
+03B2  @PSTRINGC_9600_31766_31767
+0404  menuPressed
+02D2  @const285
+02E8  @const286
+058A  upPressed
+02F6  @const288
+05A2  downPressed
+0302  @const290
+05BA  check_buttons
+1FDE  MAIN
+1FDE  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Amila\Desktop\uc_evaluation\
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\Program Files\PICC\devices\18F452.h
+    ..\..\..\..\Program Files\PICC\drivers\math.h
+
+Units:
+    C:\Users\Amila\Desktop\uc_evaluation\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta
